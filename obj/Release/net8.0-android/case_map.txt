@@ -1,0 +1,5 @@
+images\appicon;images\appicon
+raw\appconfig;raw\AppConfig
+raw\privacy;raw\privacy
+raw\ykstayfa;raw\ykstayfa
+splash\splash;splash\splash

@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Acer\\Desktop\\YKS.TAYFA\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7496B75B-D465-4EB4-B349-3E976981EA07}|YKSTayfa.csproj|c:\\users\\acer\\desktop\\yks.tayfa\\ykstayfa.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{7496B75B-D465-4EB4-B349-3E976981EA07}|YKSTayfa.csproj|solutionrelative:ykstayfa.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "YKSTayfa",
+              "DocumentMoniker": "C:\\Users\\Acer\\Desktop\\YKS.TAYFA\\YKSTayfa.csproj",
+              "RelativeDocumentMoniker": "YKSTayfa.csproj",
+              "ToolTip": "C:\\Users\\Acer\\Desktop\\YKS.TAYFA\\YKSTayfa.csproj",
+              "RelativeToolTip": "YKSTayfa.csproj",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-09-20T08:27:47.982Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YKSTayfa.Views.SettingsPage"
+             Title="Ayarlar">
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+            <Label Text="Tema" FontSize="18" />
+            <HorizontalStackLayout>
+                <Button Text="Açık" Clicked="OnLight"/>
+                <Button Text="Koyu" Margin="12,0,0,0" Clicked="OnDark"/>
+            </HorizontalStackLayout>
+
+            <Label Text="Veritabanı" FontSize="18" Margin="0,16,0,0"/>
+            <Button Text="Yedekle (DB kopyala)" Clicked="OnExportDb"/>
+            <Button Text="Mesajları CSV dışa aktar" Clicked="OnExportMessages"/>
+            <Button Text="Skorları CSV dışa aktar" Clicked="OnExportScores"/>
+            <Button Text="Reset (Demo DB'yi geri yükle)" Clicked="OnReset"/>
+
+            <Label Text="Özellik Bayrakları" FontSize="18" Margin="0,16,0,0"/>
+            <HorizontalStackLayout>
+                <Button Text="Reklamlar AÇ" Clicked="OnAdsOn"/>
+                <Button Text="Reklamlar KAPAT" Margin="12,0,0,0" Clicked="OnAdsOff"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout>
+                <Button Text="Push AÇ" Clicked="OnFcmOn"/>
+                <Button Text="Push KAPAT" Margin="12,0,0,0" Clicked="OnFcmOff"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

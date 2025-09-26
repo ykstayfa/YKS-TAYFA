@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:YKSTayfa.Views"
+       x:Class="YKSTayfa.AppShell">
+
+    <TabBar>
+        <ShellContent Title="Ana Sayfa" ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent Title="Ayarlar" ContentTemplate="{DataTemplate views:SettingsPage}" />
+    </TabBar>
+
+    <ShellContent Route="PrivacyPage" ContentTemplate="{DataTemplate views:PrivacyPage}" />
+    <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate views:AboutPage}" />
+    <ShellContent Route="ScoreCalcPage" ContentTemplate="{DataTemplate views:ScoreCalcPage}" />
+    <ShellContent Route="CrashLogPage" ContentTemplate="{DataTemplate views:CrashLogPage}" />
+    <ShellContent Route="HealthCheckPage" ContentTemplate="{DataTemplate views:HealthCheckPage}" />
+    <ShellContent Route="ChatPage" ContentTemplate="{DataTemplate views:ChatPage}" />
+    <ShellContent Route="CompetitionPage" ContentTemplate="{DataTemplate views:CompetitionPage}" />
+    <ShellContent Route="AdsPage" ContentTemplate="{DataTemplate views:AdsPage}" />
+</Shell>

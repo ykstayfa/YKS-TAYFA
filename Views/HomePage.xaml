@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="YKSTayfa.Views.HomePage"
+             Title="Ana Sayfa">
+    <ScrollView>
+        <VerticalStackLayout Padding="16" Spacing="12">
+            <Label Text="YKSTayfa" FontSize="24" HorizontalOptions="Center"/>
+            <Button Text="Ayarlar" Clicked="OnSettings" />
+            <Button Text="Puan Hesaplayıcı" Clicked="OnScoreCalc" />
+            <Button Text="Sağlık Kontrolü" Clicked="OnHealth" />
+            <Button Text="Hakkında" Clicked="OnAbout" />
+            <Button Text="Gizlilik" Clicked="OnPrivacy" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
