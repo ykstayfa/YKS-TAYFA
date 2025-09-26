@@ -20,3 +20,4 @@ EXPOSE 8080
 
 COPY --from=build /app/publish .
 ENTRYPOINT ["dotnet", "YKSTAYFA.API.dll"]
+
