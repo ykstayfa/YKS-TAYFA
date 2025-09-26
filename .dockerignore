@@ -1,7 +1,6 @@
-**/bin/
-**/obj/
-.vs/
-.git/
+**/bin
+**/obj
+.vs
+.git
 .gitignore
-Dockerfile
-README*
+Dockerfile.txt
