@@ -14,7 +14,10 @@ RUN dotnet publish "YKSTAYFA.API.csproj" -c Release -o /app/publish --no-restore
 # ===== RUNTIME STAGE =====
 FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS final
 WORKDIR /app
-ENV ASPNETCORE_URLS=http://0.0.0.0:8080
-EXPOSE 8080
+
+# Publish çıktısını kopyala
 COPY --from=build /app/publish .
+
+# Program.cs PORT env'i okuyarak dinleyecek; burada ASPNETCORE_URLS set etmiyoruz
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "YKSTAYFA.API.dll"]

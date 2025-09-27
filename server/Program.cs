@@ -19,20 +19,21 @@ builder.Services.AddSwaggerGen(c =>
 
 var app = builder.Build();
 
-// Geliştirme ortamında Swagger aç
-if (app.Environment.IsDevelopment())
+// Prod’da da Swagger açık kalsın
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "YKS-TAYFA API v1");
-    });
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "YKS-TAYFA API v1");
+});
 
-app.UseHttpsRedirection();
+// Container içinde HTTPS endpoint’i tanımlamadığımız için yönlendirmeyi kapatıyoruz
+// app.UseHttpsRedirection();
+
 app.UseAuthorization();
 
-// Controller’ları bağla
+// Controller'ları bağla
 app.MapControllers();
 
-app.Run();
+// Render'ın verdiği PORT'u dinle (yoksa 8080)
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://0.0.0.0:{port}");
