@@ -1,10 +1,11 @@
-// File: MauiProgram.cs
 using Microsoft.Maui;
-using Microsoft.Maui.Controls.Hosting;
 using Microsoft.Maui.Hosting;
-using CommunityToolkit.Maui;
+using Microsoft.Extensions.DependencyInjection;
+using System;
+using YKSTAYFA.Helpers;
+using YKSTAYFA.Services;
 
-namespace YKSTayfa
+namespace YKSTAYFA
 {
     public static class MauiProgram
     {
@@ -13,13 +14,16 @@ namespace YKSTayfa
             var builder = MauiApp.CreateBuilder();
 
             builder
-                .UseMauiApp<App>()
-                .UseMauiCommunityToolkit() // Toolkit burada zincire eklendi
-                .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
+                .UseMauiApp<App>();
+
+            // HttpClient + BaseUrl
+            builder.Services.AddHttpClient<ApiClient>(client =>
+            {
+                client.BaseAddress = new Uri(ApiConfig.BaseUrl);
+            });
+
+            // Servislerini ekle (gerektikçe buraya yenilerini ekleyebilirsin)
+            builder.Services.AddSingleton<TestService>();
 
             return builder.Build();
         }
